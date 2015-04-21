@@ -1,0 +1,1085 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>THS Web Design Team</title>
+  <meta name="description" content="THS Chem Club Website Design Entry">
+  <meta name="author" content="Frank Maloney">
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+<link rel = "stylesheet" href = "css/index.css" /> 
+
+<!-- Materialize Links --> 
+
+  <link rel = "stylesheet" href = "css/materialize.css" /> 
+  <link rel = "stylesheet" href = "css/animate.css" />
+  <script type = "text/javascript" src = "js/jquery.js"></script>
+  <script type = "text/javascript" src = "js/materialize.js"></script>
+
+
+<!-- Amcharts links --> 
+<script src="ammap/ammap.js" type="text/javascript"></script>
+<script src="ammap/maps/js/usa2Low.js" type="text/javascript"></script>
+
+
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <script type = "text/javascript">
+  function coalMap(){
+		var map = AmCharts.makeChart("mapdiv1", {
+			type: "map",
+		    "theme": "dark",
+		    pathToImages: "http://www.amcharts.com/lib/3/images/",
+
+			colorSteps: 10,
+
+			dataProvider: {
+				map: "usa2Low",
+				areas: [{
+					id: "US-AL",
+					value: 1
+				}, {
+					id: "US-AK",
+					value: 1
+				}, {
+					id: "US-AZ",
+					value: 1
+				}, {
+					id: "US-AR",
+					value: 1
+				}, {
+					id: "US-CA",
+					value: 1
+				}, {
+					id: "US-CO",
+					value: 17,
+					title: "Colorado holds 17 tons of coal, 3.6% of the US total."
+				}, {
+					id: "US-CT",
+					value: 1
+				}, {
+					id: "US-DE",
+					value: 1
+				}, {
+					id: "US-FL",
+					value: 1
+				}, {
+					id: "US-GA",
+					value: 1
+				}, {
+					id: "US-HI",
+					value: 1
+				}, {
+					id: "US-ID",
+					value: 1
+				}, {
+					id: "US-IL",
+					value: 78,
+					title: "Illinois holds 78 tons of coal, 16.5% of the US total."
+				}, {
+					id: "US-IN",
+					value: 10,
+					title: "Indiana holds 10 tons of coal, 2.1% of the US total."
+				}, {
+					id: "US-IA",
+					value: 1
+				}, {
+					id: "US-KS",
+					value: 1
+				}, {
+					id: "US-KY",
+					value: 30,
+					title: "Kentucky holds 30 tons of coal, 6.3% of the US total."
+				}, {
+					id: "US-LA",
+					value: 1
+				}, {
+					id: "US-ME",
+					value: 1
+				}, {
+					id: "US-MD",
+					value: 1
+				}, {
+					id: "US-MA",
+					value: 1
+				}, {
+					id: "US-MI",
+					value: 1
+				}, {
+					id: "US-MN",
+					value: 1
+				}, {
+					id: "US-MS",
+					value: 1
+				}, {
+					id: "US-MO",
+					value: 1
+				}, {
+					id: "US-MT",
+					value: 120,
+					title: "Montana holds 120 tons of coal, 25.4% of the US total."
+				}, {
+					id: "US-NE",
+					value: 1
+				}, {
+					id: "US-NV",
+					value: 1
+				}, {
+					id: "US-NH",
+					value: 1
+				}, {
+					id: "US-NJ",
+					value: 1
+				}, {
+					id: "US-NM",
+					value: 1
+				}, {
+					id: "US-NY",
+					value: 1
+				}, {
+					id: "US-NC",
+					value: 1
+				}, {
+					id: "US-ND",
+					value: 1
+				}, {
+					id: "US-OH",
+					value: 19,
+					title: "Ohio holds 19 tons of coal, 4.0% of the US total."
+				}, {
+					id: "US-OK",
+					value: 1
+				}, {
+					id: "US-OR",
+					value: 1
+				}, {
+					id: "US-PA",
+					value: 29,
+					title: "Pennsylvania holds 29 tons of coal, 6.1% of the US total."
+				}, {
+					id: "US-RI",
+					value: 1
+				}, {
+					id: "US-SC",
+					value: 1
+				}, {
+					id: "US-SD",
+					value: 1
+				}, {
+					id: "US-TN",
+					value: 1
+				}, {
+					id: "US-TX",
+					value: 13,
+					title: "Texas holds 13 tons of coal, 2.7% of the US total."
+				}, {
+					id: "US-UT",
+					value: 1
+				}, {
+					id: "US-VT",
+					value: 1
+				}, {
+					id: "US-VA",
+					value: 1
+				}, {
+					id: "US-WA",
+					value: 1
+				}, {
+					id: "US-WV",
+					value: 37,
+					title: "West Virginia holds 37 tons of coal, 8% of the US total."
+				}, {
+					id: "US-WI",
+					value: 1
+				}, {
+					id: "US-WY",
+					value: 68,
+					title: "Wyoming holds 68 tons of coal, 14.4% of the US total. Wyoming produces the most coal of any state in the United States."
+				}]
+			},
+
+			areasSettings: {
+				autoZoom: true
+			},
+
+			valueLegend: {
+				right: 10,
+				minValue: "little",
+				maxValue: "a lot!"
+			}
+
+		});
+}
+coalMap();
+setTimeout(function(){
+	document.getElementById("coal2").style.display = "none";
+}, 500);
+
+
+
+  function oilMap(){
+		var map = AmCharts.makeChart("mapdiv2", {
+			type: "map",
+		    "theme": "dark",
+		    pathToImages: "http://www.amcharts.com/lib/3/images/",
+
+			colorSteps: 10,
+
+			dataProvider: {
+				map: "usa2Low",
+				areas: [{
+					id: "US-AL",
+					value: 3.3,
+					title: "Alaska has approxiamately 3.3 billion barrels of oil reserves."
+				}, {
+					id: "US-AK",
+					value: .0001
+				}, {
+					id: "US-AZ",
+					value: 1
+				}, {
+					id: "US-AR",
+					value: .0001
+				}, {
+					id: "US-CA",
+					value: 3,
+					title: "California has approxiamately 3 billion barrels of oil reserves"
+				}, {
+					id: "US-CO",
+					value: .618,
+					title: "Colorado has approxiamately 618 million barrles of oil reserves."
+
+				}, {
+					id: "US-CT",
+					value: .0001
+				}, {
+					id: "US-DE",
+					value: .0001
+				}, {
+					id: "US-FL",
+					value: .0001
+				}, {
+					id: "US-GA",
+					value: .0001
+				}, {
+					id: "US-HI",
+					value: .0001
+				}, {
+					id: "US-ID",
+					value: .0001
+				}, {
+					id: "US-IL",
+					value: .0001,
+				}, {
+					id: "US-IN",
+					value: .0001,
+				}, {
+					id: "US-IA",
+					value: .0001
+				}, {
+					id: "US-KS",
+					value: .0001
+				}, {
+					id: "US-KY",
+					value: .0001,
+				}, {
+					id: "US-LA",
+					value: .463,
+					title: "Louisiana has approxiamately 463 million barrels of oil reserves."
+				}, {
+					id: "US-ME",
+					value: .0001
+				}, {
+					id: "US-MD",
+					value: .0001
+				}, {
+					id: "US-MA",
+					value: .0001
+				}, {
+					id: "US-MI",
+					value: .0001
+				}, {
+					id: "US-MN",
+					value: .0001
+				}, {
+					id: "US-MS",
+					value: .0001
+				}, {
+					id: "US-MO",
+					value: .0001
+				}, {
+					id: "US-MT",
+					value: .0001
+				}, {
+					id: "US-NE",
+					value: .0001
+				}, {
+					id: "US-NV",
+					value: .0001
+				}, {
+					id: "US-NH",
+					value: .0001
+				}, {
+					id: "US-NJ",
+					value: .0001
+				}, {
+					id: "US-NM",
+					value: .965,
+					title: "New Mexico has approxiamately 965 million barrels of oil reserves."
+				}, {
+					id: "US-NY",
+					value: .0001
+				}, {
+					id: "US-NC",
+					value: .0001
+				}, {
+					id: "US-ND",
+					value: 3.8,
+					title: "North Dakota has approxiamately 3.8 billion barrels of oil reserves."
+				}, {
+					id: "US-OH",
+					value: .0001,
+				}, {
+					id: "US-OK",
+					value: .934,
+					title: "Oklahoma has approxiamately 934 million barrels of oil reserves."
+				}, {
+					id: "US-OR",
+					value: .0001
+				}, {
+					id: "US-PA",
+					value: .0001,
+				}, {
+					id: "US-RI",
+					value: .0001
+				}, {
+					id: "US-SC",
+					value: .0001
+				}, {
+					id: "US-SD",
+					value: .0001
+				}, {
+					id: "US-TN",
+					value: .0001
+				}, {
+					id: "US-TX",
+					value: 9.6,
+					title: "Texas has approxiamately 9.6 billion barrels of oil reserves, the most of any US state."
+				}, {
+					id: "US-UT",
+					value: .613,
+					title: "Utah has approxiamately 613 million barrels of oil reserves."
+				}, {
+					id: "US-VT",
+					value: .0001
+				}, {
+					id: "US-VA",
+					value: .0001
+				}, {
+					id: "US-WA",
+					value: .0001
+				}, {
+					id: "US-WV",
+					value: .0001
+				}, {
+					id: "US-WI",
+					value: .0001
+				}, {
+					id: "US-WY",
+					value: .706,
+					title: "Wyoming has approxiamately 706 million barrels of oil reserves."
+				}]
+			},
+
+			areasSettings: {
+				autoZoom: true
+			},
+
+			valueLegend: {
+				right: 10,
+				minValue: "little",
+				maxValue: "a lot!"
+			}
+
+		});
+} 
+
+oilMap();
+setTimeout(function(){
+	document.getElementById("oil2").style.display = "none";
+}, 500);
+
+
+
+  function gasMap(){
+		var map = AmCharts.makeChart("mapdiv3", {
+			type: "map",
+		    "theme": "dark",
+		    pathToImages: "http://www.amcharts.com/lib/3/images/",
+
+			colorSteps: 10,
+
+			dataProvider: {
+				map: "usa2Low",
+				areas: [{
+					id: "US-AL",
+					value: 0.0001
+				}, {
+					id: "US-AK",
+					value: .0001
+				}, {
+					id: "US-AZ",
+					value: 1
+				}, {
+					id: "US-AR",
+					value: .0001
+				}, {
+					id: "US-CA",
+					value: 3,
+					title: "California has a few significant natural gas formations."
+				}, {
+					id: "US-CO",
+					value: 0.001
+
+				}, {
+					id: "US-CT",
+					value: .0001
+				}, {
+					id: "US-DE",
+					value: .0001
+				}, {
+					id: "US-FL",
+					value: .0001
+				}, {
+					id: "US-GA",
+					value: .0001
+				}, {
+					id: "US-HI",
+					value: .0001
+				}, {
+					id: "US-ID",
+					value: .0001
+				}, {
+					id: "US-IL",
+					value: .0001,
+				}, {
+					id: "US-IN",
+					value: .0001,
+				}, {
+					id: "US-IA",
+					value: .0001
+				}, {
+					id: "US-KS",
+					value: .0001
+				}, {
+					id: "US-KY",
+					value: .0001,
+				}, {
+					id: "US-LA",
+					value: 10,
+					title: "Louisiana has many major natural gas formations."
+				}, {
+					id: "US-ME",
+					value: .0001
+				}, {
+					id: "US-MD",
+					value: .0001
+				}, {
+					id: "US-MA",
+					value: .0001
+				}, {
+					id: "US-MI",
+					value: .0001
+				}, {
+					id: "US-MN",
+					value: 0.0001
+				}, {
+					id: "US-MS",
+					value: .0001
+				}, {
+					id: "US-MO",
+					value: .0001
+				}, {
+					id: "US-MT",
+					value: 3,
+					title: "Montana has some significant natural gas formations."
+				}, {
+					id: "US-NE",
+					value: .0001
+				}, {
+					id: "US-NV",
+					value: .0001
+				}, {
+					id: "US-NH",
+					value: .0001
+				}, {
+					id: "US-NJ",
+					value: .0001
+				}, {
+					id: "US-NM",
+					value: 10,
+					title: "New Mexico has many major natural gas formations."
+				}, {
+					id: "US-NY",
+					value: .0001
+				}, {
+					id: "US-NC",
+					value: .0001
+				}, {
+					id: "US-ND",
+					value: 0.0001
+				}, {
+					id: "US-OH",
+					value: .0001,
+				}, {
+					id: "US-OK",
+					value: 10,
+					title: "Oklahoma has many major natural gas formations."
+				}, {
+					id: "US-OR",
+					value: .0001
+				}, {
+					id: "US-PA",
+					value: .0001,
+				}, {
+					id: "US-RI",
+					value: .0001
+				}, {
+					id: "US-SC",
+					value: .0001
+				}, {
+					id: "US-SD",
+					value: .0001
+				}, {
+					id: "US-TN",
+					value: .0001
+				}, {
+					id: "US-TX",
+					value: 20,
+					title: "Texas has many major natural gas formations, and the most natural gas of any state. Along with NM, OK, WY, and LA, Texas produces more than 50% of the US's natural gas."
+				}, {
+					id: "US-UT",
+					value: .0001
+				}, {
+					id: "US-VT",
+					value: .0001
+				}, {
+					id: "US-VA",
+					value: .0001
+				}, {
+					id: "US-WA",
+					value: .0001
+				}, {
+					id: "US-WV",
+					value: .0001
+				}, {
+					id: "US-WI",
+					value: .0001
+				}, {
+					id: "US-WY",
+					value: 10,
+					title: "Wyoming has many major natural gas formations"
+				}]
+			},
+
+			areasSettings: {
+				autoZoom: true
+			},
+
+			valueLegend: {
+				right: 10,
+				minValue: "little",
+				maxValue: "a lot!"
+			}
+
+		});
+} 
+
+gasMap();
+setTimeout(function(){
+	document.getElementById("gas2").style.display = "none";
+}, 500);
+
+
+
+  </script>
+</head>
+
+<body>
+
+<script type = "text/javascript">
+	window.onload = setTimeout(function(){
+		document.getElementsByTagName( "html" )[0].classList.remove( "loading" );
+
+		// All browsers
+		document.getElementsByTagName( "html" )[0].className.replace( /loading/, "" );
+	}, 2000);
+</script>
+
+	<html class="loading">
+	    <!-- All the things -->
+	</html>
+
+
+<!--Main Screen --> 
+
+	<div class = "container" id = "mainContainer">
+		<div id = "header"> 
+			<span id = "logo"> <span style = "color: #68A4C4">F</span>OSSIL <span style = "color: #68A4C4">F</span>UELS</span>
+			<span id = "smallText"> <i>Powering the world through chemistry! </i></span>
+				<ul id = "links"> 
+					<li><a href = "#coalContainer">COAL</a></li>
+					<li><a href = "#oilContainer">OIL</a></li>
+					<li><a href = "#gasContainer">NATURAL GAS</a></li>
+				</ul>
+		</div>
+
+
+			<div id = "mainText">
+
+			<span class = "bounceInLeft"> 
+			<h1 style = "font-size: 80px">Fossil fuels</h1>
+			<h3> are sources of energy</h3>
+			<h4> that have formed in the Earth</h4>
+			<h4> over <b>MILLIONS</b> of years!</h4><br />
+
+			 </span>
+			</div>
+
+			<div id = "learnMore">
+			<center>
+				<div class = "row">
+					<div class = "col s4" >
+						<img src = 'coal.png' height = "100px" width = "100px" />
+						<br /> 
+						Learn more about coal, <br />a combustible rock!
+						<br /> 
+						<a href = "#coalContainer">
+							<i class = "mdi-hardware-keyboard-arrow-down"></i>
+						</a>
+					</div>
+					<div class = "col s4">
+						<img src = 'oil.png' height = "100px" width = "100px" />
+						<br />
+						Learn more about oil, <br /> a viscous liquid!
+						<br /> <a href = "#oilContainer"><i class = "mdi-hardware-keyboard-arrow-down"></i></a>
+					 </div>
+					<div class = "col s4">
+						<img src = 'gas.png' height = "100px" width = "100px" />
+						<br />
+						Learn more about natural gas, <br /> a flammable gas found undergroud!
+						<br /> <a href = "#gasContainer"><i class = "mdi-hardware-keyboard-arrow-down"></i></a>
+					</div>
+				</div>
+			</center>
+
+			</div>
+		</div>
+<!-- End Main Screen --> 
+
+
+<!-- Coal Section -->
+
+<div id = "coalContainer" class = "container ">	
+	<center>
+		<nav id = "coalLinks" class = "cl-effect-1">
+			<a onclick = "coalDisplay(1);"> INTRO</a>
+			<a onclick = "coalDisplay(2);"> MAP</a>
+			<a onclick = "coalDisplay(3);"> EXTRACTION</a>
+			<a onclick = "coalDisplay(4);"> COAL TO ENERGY</a>
+			<a onclick = "coalDisplay(5);"> SAFETY + STRUCTURE</a>
+
+		</nav>
+	</center>
+		<div id = "coal1" style = "visibility: visible; position: relative; opacity: 0.7" class = "coalPage">
+			
+			<h5 style = "display: inline-block; line-height: 45px"> <span style = "font-size: 40px">Coal</span> is a fossil fuel formed from the carbonization of organic matter - a process which takes millions of years! It is a combustible black or dark brown rock found mainly in underground deposits and commonly used as fuel. Coal has many important uses worldwide such as its role in steel production and the generation of electricity.With billions of tons consumed annually, it is imperative that scientists truly understand the processes and effects of coal. Scientists have thoroughly studied coal for centuries; however, there is so much more to improve upon in terms of maximizing its efficiency while additionally minimizing its environmental impact. </h5>
+
+			<br />
+					
+
+
+			<center>
+				<img src = "mc2.jpeg" width = "200px" height = "200px" /> 
+				</center>
+
+
+		</div>
+		<div id = "coal2" class = "coalPage">
+			<center>
+			Explore the map below to learn where coal is found in the United States.
+			<br /><br />
+				<div id = "mapdiv1" style = "width: 680px; height: 500px">
+				</div>
+			</center>
+		</div>
+		<div id = "coal3" class = "coalPage" style = "display: none;">
+			<center>
+				<h4> The Extraction of Coal </h4>
+				<div class = "row">
+					<div class = "col s6" style = "text-align: left;">
+						<h5 style = "text-align: center"> Surface Mining </h5>
+						Surface mining, as the name suggests, is mining which takes place closer to the surface. This method of mining is prefered as up to 90% of the coal can be removed from the coal deposits (coal beds). It is costs a lot less money and more coal can be extracted...so why is there another method? Unfortunately, a lot of coal is large deposits deep underground, and the surface mining method cannot be used. Therefore, underground mining must be used (Again, as the name suggests, this type of mining occurs deep underground). 
+
+						<br />< br/>
+						<center>
+						<img src = "ce.jpeg" height = "400px" width = "400px" />
+						</center>
+
+					</div>
+					<div class = "col s6" style = "text-align: left;">
+						<h5 style = "text-align: center"> Underground Mining </h5>
+						<h6 style = "text-align: center"> <b>Room and Pillar Mining</b></h6>
+						Room and pillar mining is the example of underground mining displayed in the illustration below. Engineers extract portions of the coal which form “rooms” and leave some coal to form “pillars” which prevent the roof from collapsing. As you can probably tell, it absolutely essential that they takes as much coal as they can without it becoming too dangerous. The downside to this method is that only 40% of the coal can be extracted. This percentage is less than half compared to surface mining but it is to be expected considering how far underground the coal is located.
+						<h6 style = "text-align: center"> <b>Longwall Mining</b></h6>
+						 Longwall mining requires careful planning but it can result in up to 75% of the coal being extracted. This a LOT more compared to room and pillar mining! Hydraulically powered supports temporarily hold the roof from collapsing (they have to be super strong to hold the intense weight!) while the coal is extracted. Once the coal has been extracted, the roof is allowed to collapse. New technology and knowledge regarding coal extraction has allowed coal to be mined efficiently and in large masses. Since surface mining is easier and more cost effective, it is preferable but as more and more coal has been extracted from the surface, the amount of coal located near the surface has significantly depleted, and it has forced many people to mine underground. There is a lot of coal deep underground but there is no point mining it unless it is in deposits large enough that it can still make money. When coal starts to run out (not in the near time future), we will be forced to mine underground in harder places causing the prices to significantly increase. Hopefully, at that time, we have developed more efficient mining methods and hopefully they have as straight forward names as the present mining methods! 
+
+					</div>
+				</div>
+			</center> 
+		</div>
+		<div id = "coal4" class = "coalPage" style = "display: none;">
+			<h4> Coal to Energy </h4>
+			<a href = "https://www.edfenergy.com/energyfuture/images/schematic/Coal-schematic-3D.png" target = "_blank">
+			Schematic 
+			</a>
+			
+			<center><h5> <b>Step 1 - Transporation</b> </h5></center>
+			 Firstly, the coal is transported from the coal mines to energy plants. These energy plants are always located near a body of water such as a river or ocean because the plants consume an enormous amount of water in generating steam (similar to nuclear plants). It is cheaper and easier to have a large supply of water on demand so you don’t have to transport thousands of gallons of water on a regular basis. Once the coal arrives, it is deposited into a massive coal supply which hasn’t really changed since it was mined. 
+			 <center><h5> <b>Step 2 - Combustion of Coal</b> </h5>
+			 C(s) + O<sub>2</sub>(g) &rarr;  CO<sub>2</sub> (g)  &nbsp;&nbsp;&nbsp; &Delta;H<sub>c</sub> = -341 KJ/mol
+			 </center>
+			 The coal is often transported using a conveyor belt of some sort to a grinder.This is when chemistry’s role in the process starts to become obvious. The grinder breaks the rocky coal into a dusty powder. Why? Well it is simple! Often, when producing large quantities of products in industry, simple knowledge from reaction kinetics can be used to speed up the reaction. This is an excellent example. The coal is grinded into a powder to increase the surface area. Therefore, when the combustion reaction takes place, the powder can react faster producing more heat and as little waste as possible. The powdered form of the coal is then blown into the furnace (boiler). This is where the coal is burned. 
+<br/>
+			 From looking at the balanced chemical reaction, we can determine what we need for the reaction to happen and what products will form once the reaction takes place. The reaction shows that the coal furnace needs to have continuous supply of oxygen so that the reaction can take place. The combustion of coal converts the chemical energy inside the coal into thermal energy. The standard heat of combustion is quite exothermic so a lot of thermal energy is produced(  =  –393.5 kJ/mol). There are also two other unwanted products being formed; ash and carbon dioxide. The carbon dioxide rises to the top of the furnace into a pipe that leads to the outside air. Before the carbon dioxide leaves the furnace, it enters a section (in the diagram it is labeled as the flue gas cleaning) that cleans out the gases that are being emitted. This makes it so the air surrounding the plant is not polluted. It should be noted that carbon dioxide is not the only gas being emitted. Other toxic gases such as sulfur dioxide are present since the coal is not pure (in other words coal is often mixed with sulfur and other elements). The second unwanted product, ash, is removed from a hole at the bottom and is typically 
+
+			 <center><h5> <b>Step 3 - Vaporization of Water</b> </h5>
+			 H<sub>2</sub>O(l) &rarr; H<sub>2</sub>O(g) &nbsp;&nbsp;&nbsp; &Delta;H = +44 KJ at STP
+			 </center>
+			This second reaction takes place in the furnace.
+			Inside the furnace, there is a pipe filled with  clean water. The immense heat caused by the burning of the coal is used to vaporize the water into steam. The water is in pipes so that vaporization of water and the combustion of coal do not interfere with each other. The pipes need to be made of a metal that can conduct the heat from the combustion of the coal. Most of the time, metals like copper are used (also used in frying pans) because they “transfer” the heat from the combustion to the water with as little interference as possible. The hot steam rises and makes its way towards the generator (or turbine). 
+
+			<center><h5> <b>Step 4 - The Turbine/Generator</b> </h5></center>
+
+			The steam creates a lot of pressure causing the blades of the steam turbine to spin so the kinetic energy is converted to mechanical energy. This spinning motion creates electricity similar to how a wind turbine produces electricity. The turbine is connected to a generator so that when the turbine spins, so does the generator. The generator uses an electromagnetic field to convert this mechanical energy into electrical energy.
+			In conclusion, the chemical energy in the coal is converted to thermal energy in the combustion of coal and the thermal energy is converted into mechanical energy in the turbine which is finally converted to electrical energy in the generator which can finally be used to power our homes.
+
+		</div>
+
+		<div id = "coal5" class = "coalPage" style = "display: none">
+			<h4> Structure of Coal </h4>
+			<center><img src = "cs.jpg" width = "250px" height = "200px" style = "display: inline-block" /></center>
+			<br /><br />
+			The formation of coal is one that spans over 300 million years! A long time ago, way before the age of dinosaurs, vegetation such as plants and trees would die and eventually sink to the bottom of swamps and bogs. This build-up of sediments with the combination of the movement of Earth’s crust allowed a revolutionary chemical reaction to occur - coalification. This is when the buried sediments are heated and crushed under extreme pressures and temperatures creating physical and chemical changes in the vegetation. The quality of the coal produced depends on the conditions of the reaction and the length of the reaction. At first, the peat is transformed into Lignite, which has the lowest carbon content but as the reaction proceeds, the content of carbon becomes richer and thus more energy can be extracted per pound! <br /><br />
+
+			The type of coal is determined by the amount of carbon in the coal - the more carbon, the more energy can be produced.
+
+
+			<h4> Safety and the Environment </h4>
+			<center><h5>Environmental Effects of Coal</h5></center>
+			Coal, unfortunately, has many negative environmental side-effects. Coal is especially harmful when concentrated with chemicals like sulfur which ultimately produce acid rain and affect ecosystems across the globe. Additionally, the combustion of Coal heavily produces CO2 and sometimes even the deadly CO! 
+
+			<br />           
+The problem with things like coal is that they are not pure. Most coal is dirty (it has a lot of impurities mixed in it) so when the coal is combusted to form energy, lots of toxic fumes are emitted. Scientists are still working on ways to minimize these drawbacks but it is extremely difficult to prevent it. Some coal is more “dirty” than others so mining the less dirty coal first is a temporary solution until better solutions have been discovered. 
+			<center><h5>Safety of Coal</h5></center>	
+			While the combustion of coal and the harnessing of energy in the 21st century is all very secure, coal mining is notoriously known for being extremely dangerous! According to the NMA, Coal fatalities have decreased by a fold of 2 over the past 18 years. In the industrial revolution, many workers worked in the presence of the toxic fumes emitted from coal. These coal fumes can cause many lung cancers and can definitely shorten the lifespan of humans to remarkable amounts when large periods of time spent around them. Extracting the coal used to be incredibly dangerous and many people have died in coal mines. Especially, once people start going deep underground, mine shafts can collapse either causing instant death or by trapping people underground. Fortunately, careful planning has now made extracting coal very safe. In less developed countries, however, the safety of the coal mines is sacrificed in order to make it cheaper. 
+			<br /><br />
+		<a href = "http://www.nma.org/pdf/020206_coal_safety_fact_sheet.pdf"> Coal Safety Fact Sheet </a>
+	<br /><br />
+		</div>
+</div>
+
+
+<script type = "text/javascript">
+
+var numCoalDivs = 5;
+var coalDivs = [];
+for(var i = 0; i < numCoalDivs; i++){
+	coalDivs.push(document.getElementById('coal' + (i+1)));
+	coalDivs[i].style.setProperty('-webkit-transition', 'opacity 2s')
+}
+
+function coalDisplay(num){
+	for(var i = 0; i < coalDivs.length; i++){
+		if(num == (i+1)){
+			$("#coal" + num).show(1250);
+
+		}else{
+			$("#coal" + (i+1)).hide(500);
+		}
+	}
+
+	//alert("hey");
+}
+
+
+
+
+
+
+</script>
+
+<!-- End Coal Section -->
+
+
+<!-- Begin Oil Section -->
+
+<div id = "oilContainer" class = "container ">	
+	<center>
+		<nav id = "oilLinks" class = "cl-effect-1">
+			<a onclick = "oilDisplay(1);"> INTRO</a>
+			<a onclick = "oilDisplay(2);"> MAP</a>
+			<a onclick = "oilDisplay(3);"> EXTRACTION</a>
+			<a onclick = "oilDisplay(4);"> OIL TO ENERGY</a>
+			<a onclick = "oilDisplay(5);"> SAFETY + STRUCTURE</a>
+
+		</nav>
+	</center>
+
+	<div id = "oil1" class = "oilPage">
+	<h5 style = "display: inline-block; line-height: 45px"> <span style = "font-size: 40px">Oil,</span> the most utilized fossil fuel in the world, takes it form in many states and shapes. However, there is one thing that does not really change - that is its chemical composition. Oil is essentially a combination of various hydrocarbons comprised of hydrogen, carbon, and oxygen varying in amounts per substance. Petroleum, oil in its liquid form, appears as dark and viscous solution, and is often referred to crude oil. In its solid form, it appears as asphalt and in its somewhat solid form, it appears as a tar-like mixture.Oil is used in every aspect of our lives. This volatile substance is used to fuel transportation, to make plastic, to heat homes, to fertilize vegetation, and produce electricity!
+	<br /><br />
+
+	<center> <img src = "mo1.jpg" width = "250px" height = "200px" /> </center>
+</h5>
+	</div>
+	<div id = "oil2" class = "oilPage"> 
+		<center> Explore the map below in order to learn where oil is located in the United States.
+			<div id = "mapdiv2" style = "width: 680px; height: 500px" style = "display: none"> </div>
+		</center>
+	</div>
+
+	<div id = "oil3" class = "oilPage" style = "display: none">
+	<center><h4> The Extraction of Oil </h4></center>
+	Before any oil can be extracted from the ground, the oil field must be located. There are many methods to do so; mostly involving the use of seismic waves and explosions! As soon as the oil has been located, the drilling site must be prepared. Engineers must “scout” the location to ensure maximum safety and efficiency. The oil company must also fill out legal issues before any oil is extracted. As you can tell, there is lot of work that goes into this and we haven’t even talked about extracting the oil yet - this all just the preparation for it. Also, the oil company must prepare the land around the digging site and they must start to dig the main hole. Meanwhile, the oil rig equipment must be set up around the main hole and be ready to start drilling. After all this has happened, the drilling process can begin but it does not end there...in fact it only begins! The drill penetrates the earth’s crust digging deeper and deeper into the ground whilst the oil is being sucked up. Engineers ensure that cement is used as they dig deeper so the hole doesn’t collapse in on itself. Exciting new drilling technology such as using lasers to drill oil are being worked on presently and could be used in the future.
+<br /><br />
+	<center><img src = "od1.jpg" height = "400px" width = "400px"></center>
+
+
+	</div>
+
+	<div id = "oil4" class = "oilPage" style = 'display: none'>
+		<h4> Oil to Energy </h4>
+		<a href = "http://www.edfenergy.com/energyfuture/images/schematic/Oil-schematic-3D.png" target = "_blank">
+			Schematic 
+		</a>
+		<center><h5> <b>Step 1 - Transporation</b> </h5></center>
+		Once the oil has been extracted from the ground, it is transported to the power station (where the electricity is produced). The oil is deposited into a large storage tanks and it stays there until it is ready to proceed to next part of the process.
+
+			 <center><h5> <b>Step 2 - Combustion of Oil</b> </h5>
+			 C<sub>8</sub>H<sub>18</sub> (l) + 25/2 O<sub>2</sub>(g) &rarr;  8CO<sub>2</sub>(g) + 9H<sub>2</sub>O(l)     &nbsp;&nbsp;&nbsp; &Delta;H<sub>c</sub> = -5460 KJ/mol
+			 </center>
+			 Since petroleum (oil) is a mixture of several organic compounds, it is difficult to write a chemical reaction. However, since octane is one of the most important parts of the mixture, we have decided to allow it to represent the gasoline in this case. The oil is transported to the boiler where it is combusted. In the boiler, there is a large flame which combusts the oil while rapidly producing immense heat and smoke (carbon dioxide and other pollutants) and also rapidly using up the oxygen. Similarly to the coal process, the carbon dioxide and other toxic gases are allowed to escape but are first cleaned before they are allowed to enter the atmosphere. There are pipes filled with water in the boiler. The large produce of heat is used to convert the water in the pipes into steam.
+
+
+			 <center><h5> <b>Step 3 - Vaporization of Water</b> </h5>
+			 H<sub>2</sub>O(l) &rarr; H<sub>2</sub>O(g) &nbsp;&nbsp;&nbsp; &Delta;H = +44 KJ at STP
+			 </center>
+			This is the second reaction taking place in the furnace.
+Inside the furnace, there is a pipe filled with  clean water. The immense heat caused by the burning of the oil is used to vaporize the water into steam. The water is in pipes so that vaporization of water and the combustion of oil do not interfere with each other. The pipes need to be made of a metal that can conduct the heat from the combustion of the oil. Most of the time, metals like copper are used (also used in frying pans) because they “transfer” the heat from the combustion to the water with as little interference as possible. The hot steam rises and makes its way towards the generator (or turbine). 
+
+			<center><h5> <b>Step 4 - The Turbine/Generator</b> </h5></center>
+
+			The steam creates a lot of pressure causing the blades of the steam turbine to spin so the kinetic energy is converted to mechanical energy. This spinning motion creates electricity similar to how a wind turbine produces electricity. The turbine is connected to a generator so that when the turbine spins, so does the generator. The generator uses an electromagnetic field to convert this mechanical energy into electrical energy.
+In conclusion, the chemical energy in the oil is converted to thermal energy in the combustion of oil and the thermal energy is converted into mechanical energy in the turbine which is finally converted to electrical energy in the generator which can finally be used to power our homes.
+
+		</div>
+
+
+	<div id = "oil5" class = "oilPage" style = 'display: none'>
+				<h4> Structure of Coal </h4>
+			<center><img src = "os.png" width = "300px" height = "200px" style = "display: inline-block" /></center>
+			<br /><br />
+			Like coal, the formation of oil is arduous to say the least taking millions of years. Small organisms in the ocean would absorb energy from the sun and this chemical energy would be stored as carbon macromolecules in their bodies, When these tiny organisms eventually died, they would sink to the bottom and form a layer of organic mass comprised of mainly carbon.. This would eventually be buried upon millions of tons of sediment to the point that the heat and pressure would allow this organic mass to chemically transform into this iconic fossil fuel we know today!
+
+			
+
+
+			<h4> Safety and the Environment </h4>
+			<center><h5>Environmental Effects of Oil</h5></center>
+			There are many by-products to the combustion of oil including, CO2, CO, NOx, SOx, particulate matter, and lead toxins. These pollutants increase the Greenhouse effect, damage ecosystems across the globe, and it deteriorates the air quality. Additionally, plastic, which is produced from crude oil, is posing a great threat to society. Unable to decompose quickly, plastic pollutes various parts of the world in landfills which devastates our environment. Not only do they smell terribly, landfills are unable to keep up with the rapid amount of plastic that is being thrown away. As you can see oil is highly detrimental to our world despite its amazing role industrially for fuel.
+			<center><h5>Safety of Oil</h5></center>	
+Oil is not very safe because it is extremely volatile meaning that it can explode upon an “interruption” with ease thus making this substance very powerful. Although, scientists and engineers have developed safe manners in which they harbor oil and effectively convert the chemical energy stored in the bonds of the carbon molecules to electrical energy which can be used for a limitless amount of things industrially and just in general! Therefore, the harnessing of oil is very safe even though oil itself is very dangerous.
+
+			<br /><br />
+	</div>
+			</div>
+
+
+<script type = "text/javascript">
+
+var numOilDivs = 5;
+var oilDivs = [];
+for(var i = 0; i < numCoalDivs; i++){
+	oilDivs.push(document.getElementById('oil' + (i+1)));
+	oilDivs[i].style.setProperty('-webkit-transition', 'opacity 2s')
+}
+
+function oilDisplay(num){
+	for(var i = 0; i < oilDivs.length; i++){
+		if(num == (i+1)){
+			$("#oil" + num).show(1250);
+
+		}else{
+			$("#oil" + (i+1)).hide(500);
+		}
+	}
+
+	//alert("hey");
+}
+
+
+
+
+
+
+</script>
+
+
+<!-- End Oil Section -->
+
+
+<!-- Start Natural Gas Section --> 
+<div id = "gasContainer" class = "container ">	
+	<center>
+		<nav id = "gasLinks" class = "cl-effect-1">
+			<a onclick = "gasDisplay(1);"> INTRO</a>
+			<a onclick = "gasDisplay(2);"> MAP</a>
+			<a onclick = "gasDisplay(3);"> EXTRACTION</a>
+			<a onclick = "gasDisplay(4);"> GAS TO ENERGY</a>
+			<a onclick = "gasDisplay(5);"> SAFETY + STRUCTURE</a>
+
+		</nav>
+	</center>
+
+	<div id = "gas1" class = "gasPage">
+	<h5 style = "display: inline-block; line-height: 45px"> <span style = "font-size: 40px">Natural gas</span> is a gaseous mixture composed of hydrocarbons such as methane and is trapped underground.  Natural Gas is the cleanest fossil fuel when combusted and is also the safest in regards to extraction. Natural Gas has been used for decades for a plethora of functions including heating millions of households across the globe, cooking your dinner on a stove, and making certain medicines..  
+	<br /><br />
+
+	<center> <img src = "mg1.jpg" width = "300" height = "220" /> </center>
+</h5>
+	</div>
+	<div id = "gas2" class = "gasPage"> 
+		<center> Explore the map below in order to learn where natural gas is located in the United States.
+			<div id = "mapdiv3" style = "width: 680px; height: 500px" style = "display: none"> </div>
+		</center>
+	</div>
+
+	<div id = "gas3" class = "gasPage" style = "display: none">
+	<center><h4> The Extraction of Natural Gas </h4></center>
+	In order to locate Natural Gas reserved, scientists use seismic instruments to measure the energy of certain areas in the US. Once located, there are many methods known for obtaining the Natural Gas itself. It is actually a pretty daunting task. The most famous method is known a fracking, or hydraulic fracturing. Basically, by pressurizing water into rocks, the Natural Gas is able to leave the rock formation. While effective, there are many downsides affiliated with this technique as well. Firstly, it is fairly obvious that the water is going to waste to just get Natural Gas. Also, the water sprayed into the rocks will be contaminated and this deeply hurts the environment!
+Nowadays, scientists are using pipelines from the underground to the households. This is because it makes it safer and thus cheaper! Once the gas is obtained, it is sent through pipelines to reach the millions of Americans every day! <br /><br />
+
+		<center><img src = "fr1.jpg" height = "400px" width = "400px" /> </center>
+	</div>
+
+	<div id = "gas4" class = "gasPage" style = 'display: none'>
+		<h4> Natural Gas to Energy </h4>
+		<a href = "http://www.edfenergy.com/energyfuture/images/schematic/Gas-schematic-3D.png" target = "_blank">
+			Schematic 
+		</a>
+		<center><h5> <b>Step 1 - Transporation</b> </h5></center>
+			The natural gas is transported from the extraction sites to the power sites. This is similar to how coal and oil are transported but it should be noted that natural gas in gas form whereas coal is a solid and oil is a liquid. For this reason, pipes are typically preferred for transporting natural gas. The natural gas is deposited into large storage tanks until they are ready to be combusted!
+
+			 <center><h5> <b>Step 2 - Combustion of Natural Gas</b> </h5>
+			 CH<sub>4</sub>(g) + 2O<sub>2</sub>(g) --> CO<sub>2</sub>(g) + 2H<sub>2</sub>O(l)        &nbsp;&nbsp;&nbsp; &Delta;H<sub>c</sub> = -890 KJ/mol
+			 </center>
+			                   
+Natural gas is mainly methane so for practical purposes, we will define the combustion of methane as the combustion of natural gas but it should be noted that they are different. The gas is transported to the boiler where it is combusted. In the boiler, there is a large flame which combusts the gas while rapidly producing immense heat and smoke (carbon dioxide and other pollutants) and also rapidly using up the oxygen. <br />
+
+Similarly to the coal and oil process, the carbon dioxide and other toxic gases are allowed to escape but are first cleaned before they are allowed to enter the atmosphere. There are pipes filled with water in the boiler. The large produce of heat is used to convert the water in the pipes into steam.
+
+
+			 <center><h5> <b>Step 3 - Vaporization of Water</b> </h5>
+			 H<sub>2</sub>O(l) &rarr; H<sub>2</sub>O(g) &nbsp;&nbsp;&nbsp; &Delta;H = +44 KJ at STP
+			 </center>
+			This is the second reaction taking place in the furnace.
+Inside the furnace, there is a pipe filled with  clean water. The immense heat caused by the burning of the gas is used to vaporize the water into steam. The water is in pipes so that vaporization of water and the combustion of gas do not interfere with each other. The pipes need to be made of a metal that can conduct the heat from the combustion of the oil. Most of the time, metals like copper are used (also used in frying pans) because they “transfer” the heat from the combustion to the water with as little interference as possible. The hot steam rises and makes its way towards the generator (or turbine). 
+
+			<center><h5> <b>Step 4 - The Turbine/Generator</b> </h5></center>
+The steam creates a lot of pressure causing the blades of the steam turbine to spin so the kinetic energy is converted to mechanical energy. This spinning motion creates electricity similar to how a wind turbine produces electricity. The turbine is connected to a generator so that when the turbine spins, so does the generator. The generator uses an electromagnetic field to convert this mechanical energy into electrical energy.
+In conclusion, the chemical energy in the gas is converted to thermal energy in the combustion of gas and the thermal energy is converted into mechanical energy in the turbine which is finally converted to electrical energy in the generator which can finally be used to power our homes.
+
+		</div>
+
+
+	<div id = "gas5" class = "gasPage" style = 'display: none'>
+				<h4> Structure of Natural Gas </h4>
+			<center><img src = "gs1.jpg" width = "300px" height = "300px" style = "display: inline-block" /></center>
+			<br /><br />
+			As all fossil fuels, Natural Gas is formed from the compression of old living tissue under abnormally high amounts of pressure and heat. The energy the animals and plants received from the sun is stored in their Carbon bonds. Over millions of years, it is possible to drill a well into a Natural Gas Reserve/Chamber. 
+
+			
+
+
+			<h4> Safety and the Environment </h4>
+			<center><h5>Environmental Effects of Natural Gas</h5></center>
+			The combustion of Natural Gas produces many pollutants like NOx, SOx, and CO2. Although way cleaner than the other two, it still does add to the Greenhouse Effect and Global Warming.
+Additionally, another problem which is arising is an issue with the water to cool down the combustion chambers. The coolant which is thus really hot is released back into the body of water and this drastically changes the temperature of water - something that can prove to be catastrophic to fish and other marine organisms
+			<center><h5>Safety of Natural</h5></center>	
+While gas is extremely explosive, it is actually very safe. Reports have shown that the number of incidents involving Natural Gas explosions has decreased by 29% since 1988. 	Natural gas is originally odorless but when the chemical, mercaptan, is added, it gives the gas its notorious rotten odor. This is why it is possible to smell a gas leakage and prevent something from happening.
+
+
+			<br /><br />
+	</div>
+			</div>
+
+
+<script type = "text/javascript">
+
+var numGasDivs = 5;
+var gasDivs = [];
+for(var i = 0; i < numGasDivs; i++){
+	gasDivs.push(document.getElementById('gas' + (i+1)));
+	gasDivs[i].style.setProperty('-webkit-transition', 'opacity 2s')
+}
+
+function gasDisplay(num){
+	for(var i = 0; i < gasDivs.length; i++){
+		if(num == (i+1)){
+			$("#gas" + num).show(1250);
+
+		}else{
+			$("#gas" + (i+1)).hide(500);
+		}
+	}
+
+	//alert("hey");
+}
+
+
+</script>
+<!-- End Natural Gas Section --> 
+
+
+
+
+
+
+
+<script type = "text/javascript">
+//SCROLLING FUNCTIONALITY
+$(function(){
+  $('a[href*=#]').click(function() {
+	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+	    && location.hostname == this.hostname) {
+	      var $target = $(this.hash);
+	      $target = $target.length && $target
+	      || $('[name=' + this.hash.slice(1) +']');
+	      if ($target.length) {
+	        var targetOffset = $target.offset().top;
+	        $('html,body')
+	        .animate({scrollTop: targetOffset}, 1000);
+	       return false;
+	      }
+	    }
+	});
+});
+</script>
+</body>
+</html>

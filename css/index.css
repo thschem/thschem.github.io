@@ -1,0 +1,258 @@
+
+html, body {
+    /* For the loading indicator to be vertically centered ensure */
+    /* the html and body elements take up the full viewport */
+    height: 100%;
+}
+html.loading {
+    /* Replace #333 with the background-color of your choice */
+    /* Replace loading.gif with the loading image of your choice */
+    background:  #15191e url('../loading.gif') no-repeat 50% 50%;
+
+    /* Ensures that the transition only runs in one direction */
+    -webkit-transition: background-color 0;
+    transition: background-color 0;
+}
+body {
+    -webkit-transition: opacity 1.5s ease-in;
+    transition: opacity 1.5s ease-in;
+}
+html.loading body {
+    /* Make the contents of the body opaque during loading */
+    opacity: 0;
+
+    /* Ensures that the transition only runs in one direction */
+    -webkit-transition: opacity 0;
+    transition: opacity 0;
+}
+
+.container{
+	width: 100%;
+	min-height: 100%;
+
+}
+
+#mainContainer{
+  
+
+	width: 100%;
+	min-height: 100%;
+	opacity: 0.7;
+	border-bottom: 5px solid #68A4C4;
+	background: radial-gradient(farthest-side, rbga(0,0,0,0), #ececec);
+
+}
+
+
+
+#header{
+	color: black;
+	width: 100%;
+	height: auto;
+	padding: 10px;
+	border-bottom: 1px solid #777;
+	font-weight: 700;
+	font-size: 24px;
+	/*line-height: 1.6em;*/
+	font-family: 'Open Sans', Arial;
+	color: #777;
+
+	
+}
+
+
+
+#smallText{
+	font-size: 12px;
+}
+#links{
+	float: right;
+	margin-right: 20px; 
+	font-size: 14px;
+	font-weight: 300px;
+	color: #656565;
+
+
+}
+#smallLink{
+	font-size: 15px;
+}
+
+#links li {
+	display: inline;
+	margin-right: 50px;
+	-webkit-transition: color 1s;
+}
+
+#links li a:hover{
+	color: #D35400;
+	cursor: pointer;
+}
+
+#links a{
+	color: #656565;
+}
+
+#mainText{
+	color: black;
+	font-family: Source Sans Pro;
+	text-align: center;
+	margin-top: 8.5%;
+}
+
+#mapContainer{
+	margin-top: 4.5%;
+}
+
+
+#images{
+	margin-top: 8.5%;
+	font-family: Source Sans Pro;
+	color: white;
+	font-size: 20px;
+
+}
+
+#learnMore{
+	margin-top: 2.5%;
+}
+
+#learnMore i{
+	font-size: 30px;
+}
+
+
+/* Start Coal Section */
+
+#coalContainer{
+	border-top: 5px solid #68A4C4;
+	width: 100%;
+	min-height: 100%;
+	border-bottom: 5px solid #F89406;
+}
+
+.coalPage{
+	font-family: Source Sans Pro;
+	opacity: 0.7;
+	padding: 30px;
+	display: inline-block;
+	width: 100%;
+	min-height: 100%;
+}
+
+#coalLinks{
+	padding: 20px;
+	background-color: white !important;
+	box-shadow: none;
+}
+
+#coalLinks a{
+	color: #68A4C4;
+	cursor: pointer;
+	margin-right: 15px;
+}
+
+.cl-effect-1 a::before,
+.cl-effect-1 a::after {
+	display: inline-block;
+	opacity: 0;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.2s;
+	transition: transform 0.3s, opacity 0.2s;
+}
+
+.cl-effect-1 a::before {
+	margin-right: 10px;
+	content: '[';
+	-webkit-transform: translateX(20px);
+	-moz-transform: translateX(20px);
+	transform: translateX(20px);
+}
+
+.cl-effect-1 a::after {
+	margin-left: 10px;
+	content: ']';
+	-webkit-transform: translateX(-20px);
+	-moz-transform: translateX(-20px);
+	transform: translateX(-20px);
+}
+
+.cl-effect-1 a:hover::before,
+.cl-effect-1 a:hover::after,
+.cl-effect-1 a:focus::before,
+.cl-effect-1 a:focus::after {
+	opacity: 1;
+	-webkit-transform: translateX(0px);
+	-moz-transform: translateX(0px);
+	transform: translateX(0px);
+}
+
+
+
+
+#oilContainer{
+	border-top: 5px solid #F4B350;
+	width: 100%;
+	min-height: 100%;
+	border-bottom: 5px solid #D91E18;
+}
+
+.oilPage{
+
+	font-family: Source Sans Pro;
+	opacity: 0.7;
+	padding: 30px;
+	display: inline-block;
+	width: 100%;
+	min-height: 100%;
+
+}
+
+
+#oilLinks{
+	background-color: white;
+	box-shadow: none;
+	padding: 20px;
+	height: auto;
+}
+
+#oilLinks a {
+	color: #F4B350;
+	cursor: pointer;
+	margin-right: 15px;
+}
+
+
+
+
+
+#gasContainer{
+	border-top: 5px solid #F22613;
+	width: 100%;
+	min-height: 100%;
+}
+
+.gasPage{
+
+	font-family: Source Sans Pro;
+	opacity: 0.7;
+	padding: 30px;
+	display: inline-block;
+	width: 100%;
+	min-height: 100%;
+
+}
+
+
+#gasLinks{
+	background-color: white;
+	box-shadow: none;
+	padding: 20px;
+	height: auto;
+}
+
+#gasLinks a {
+	color: #F22613;
+	cursor: pointer;
+	margin-right: 15px;
+}
